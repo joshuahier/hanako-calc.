@@ -18,28 +18,40 @@
                 <button onclick="appendValue('8')">8</button>
                 <button onclick="appendValue('9')">9</button>
                 <button onclick="appendValue('+')" class="operator-btn">+</button>
-                
                 <button onclick="appendValue('4')">4</button>
                 <button onclick="appendValue('5')">5</button>
                 <button onclick="appendValue('6')">6</button>
                 <button onclick="appendValue('-')" class="operator-btn">-</button>
-                
                 <button onclick="appendValue('1')">1</button>
                 <button onclick="appendValue('2')">2</button>
                 <button onclick="appendValue('3')">3</button>
                 <button onclick="appendValue('x')" class="operator-btn">x</button>
-                
                 <button onclick="appendValue('0')">0</button>
                 <button onclick="appendValue('.')">.</button>
                 <button onclick="calculateResult()" class="operator-btn">=</button>
                 <button onclick="appendValue(':')" class="operator-btn">:</button>
-                
-                <button onclick="clearDisplay()">C</button>
-                <button onclick="backspace()">⌫</button>
+                <button onclick="clearDisplay()" class="operator-btn">C</button>
+                <button onclick="backspace()" class="operator-btn">⌫</button>
                 <button onclick="toggleAdvancedKeys()" style="grid-column: span 2; width: auto;">Adv.</button>
             </div>
 
             <div id="advanced-keys" class="keypad-grid hidden">
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('+')" class="operator-btn">+</button>
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button onclick="appendValue('-')" class="operator-btn">-</button>
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="appendValue('x')" class="operator-btn">x</button>
+                <button onclick="appendValue('0')">0</button>
+                <button onclick="appendValue('.')">.</button>
+                <button onclick="calculateResult()" class="operator-btn">=</button>
+                <button onclick="appendValue(':')" class="operator-btn">:</button>
                 <button onclick="appendValue('sin(')">sin</button>
                 <button onclick="appendValue('cos(')">cos</button>
                 <button onclick="appendValue('tan(')">tan</button>
@@ -49,13 +61,8 @@
                 <button onclick="appendValue('mod')">mod</button>
                 <button onclick="calculateFactorial()">n!</button>
                 <button onclick="appendValue('π')">π</button>
-                <button onclick="appendValue('+')" class="operator-btn">+</button>
-                <button onclick="appendValue('-')" class="operator-btn">-</button>
-                <button onclick="appendValue('x')" class="operator-btn">x</button>
-                <button onclick="appendValue(':')" class="operator-btn">:</button>
-                <button onclick="calculateResult()" class="operator-btn">=</button>
-                <button onclick="clearDisplay()">C</button>
-                <button onclick="backspace()">⌫</button>
+                <button onclick="clearDisplay()" class="operator-btn">C</button>
+                <button onclick="backspace()" class="operator-btn">⌫</button>
                 <button onclick="toggleAdvancedKeys()">Std.</button>
             </div>
         </div>

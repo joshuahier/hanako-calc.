@@ -36,7 +36,7 @@ body{
     position: absolute;
     width: 100px;
     height: auto;
-    top: clamp(-110px, -6vw, -55px);
+    top: 8px;
     right: clamp(-160px, -8vw, -70px);
     animation: float 5s ease-in-out infinite;
     pointer-events: none;
@@ -47,7 +47,7 @@ body{
     position: absolute;
     width: 100px;
     height: auto;
-    top: clamp(-110px, -6vw, -55px);
+    top: 8px;
     left: clamp(-80px, -5vw, -35px);
     animation: float2 3s ease-in-out infinite;
     pointer-events: none;
@@ -134,13 +134,8 @@ button:active{
     background-color: #e42413;
 }
 
+#standard-keys button:last-child,
 #advanced-keys button:last-child {
-    grid-column: span 4;
-    width: auto;
-    border-radius: 50px;
-}
-
-#standard-keys button:nth-last-child(1) {
     grid-column: span 2;
     width: auto;
     border-radius: 50px;
