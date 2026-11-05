@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #5c0d0d;
+    background-image: 
+        radial-gradient(circle at 50% 10%, rgba(255, 247, 219, 0.178) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(235, 254, 255, 0.151) 0%, transparent 45%),
+        radial-gradient(circle at 80% 90%, rgba(245, 236, 255, 0.096) 0%, transparent 45%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.effect1{
+    z-index: 2;
+    position: absolute;
+    width: 250px;
+    height: auto;
+    margin-top: 650px;
+    margin-left: 500px;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.effect2{
+    z-index: 2;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    margin-top: -800px;
+    margin-right: 550px;
+    animation: float 5s ease-in-out infinite;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.effect3{
+    z-index: 2;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    margin-top: -810px;
+    margin-right: -700px;
+    transform: rotate(-25deg);
+    animation: float2 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateX(-16px); }
+}
+
+#calculator{
+    position: relative;
+    font-family: monospace;
+    background-color: #cba389;
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#display{
+    box-sizing: border-box;
+    background-color: #4a2e35;
+    width: 100%;
+    color: #ffffff;
+    font-size: 3.5rem;
+    padding: 20px 20px;
+    margin: 15px 5 28px 5;
+    text-align: left;
+    border: 16px solid #cba389;
+    min-height: 150px;
+    font-family: monospace;
+    border-radius: 1px;
+}
+
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+    font-family: monospace;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: #cb5a4a;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+button:hover{
+    background-color: #ff5a44;
+}
+button:active{
+    background-color: #ff3b21;
+}
+
+.operator-btn{
+    background-color: #9e342a;
+}
+
+.operator-btn:hover{
+    background-color: #c53225;
+}
+
+.operator-btn:active{
+    background-color: #e42413;
+}
