@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="icon" type="image/png" href="7f34c133e0392598624fc23d542d425d.jpg">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>hanako calc.</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <img src="f755ac5117ff3eb4172e25f01b745e99-Photoroom.png" class="effect1">
-        <img src="Hakujoudai_(Green)-Photoroom.png" class="effect2">
-        <img src="df19e7339232cf54a015f312051ae55c-Photoroom.png" class="effect3">
-    </body>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hanako calc.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="calculator-container">
 
         <div id="calculator">
-            <input id="display" readonly>
-            <div id="keys">
-                <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
-                <button onclick="appendToDisplay('7')">7</button>
-                <button onclick="appendToDisplay('8')">8</button>
-                <button onclick="appendToDisplay('9')">9</button>
-                <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
-                <button onclick="appendToDisplay('4')">4</button>
-                <button onclick="appendToDisplay('5')">5</button>
-                <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('*')" class="operator-btn">x</button>
-                <button onclick="appendToDisplay('1')">1</button>
-                <button onclick="appendToDisplay('2')">2</button>
-                <button onclick="appendToDisplay('3')">3</button>
-                <button onclick="appendToDisplay('/')" class="operator-btn">:</button>
-                <button onclick="appendToDisplay('0')">0</button>
-                <button onclick="appendToDisplay('.')">.</button>
-                <button onclick="calculate()">=</button>
-                <button onclick="clearDisplay()" class="operator-btn">C</button>
+            <input type="text" id="display" readonly>
+
+            <div id="standard-keys" class="keypad-grid">
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('+')" class="operator-btn">+</button>
+                
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button onclick="appendValue('-')" class="operator-btn">-</button>
+                
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="appendValue('x')" class="operator-btn">x</button>
+                
+                <button onclick="appendValue('0')">0</button>
+                <button onclick="appendValue('.')">.</button>
+                <button onclick="calculateResult()" class="operator-btn">=</button>
+                <button onclick="appendValue(':')" class="operator-btn">:</button>
+                
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="backspace()">⌫</button>
+                <button onclick="toggleAdvancedKeys()" style="grid-column: span 2; width: auto;">Adv.</button>
+            </div>
+
+            <div id="advanced-keys" class="keypad-grid hidden">
+                <button onclick="appendValue('sin(')">sin</button>
+                <button onclick="appendValue('cos(')">cos</button>
+                <button onclick="appendValue('tan(')">tan</button>
+                <button onclick="appendValue('log(')">log</button>
+                <button onclick="appendValue('^')">x^y</button>
+                <button onclick="insertSqrt()">√</button>
+                <button onclick="appendValue('mod')">mod</button>
+                <button onclick="calculateFactorial()">n!</button>
+                <button onclick="appendValue('π')">π</button>
+                <button onclick="appendValue('+')" class="operator-btn">+</button>
+                <button onclick="appendValue('-')" class="operator-btn">-</button>
+                <button onclick="appendValue('x')" class="operator-btn">x</button>
+                <button onclick="appendValue(':')" class="operator-btn">:</button>
+                <button onclick="calculateResult()" class="operator-btn">=</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="backspace()">⌫</button>
+                <button onclick="toggleAdvancedKeys()">Std.</button>
             </div>
         </div>
 
-        <script src="script.js"></script>
-    </body>
+        <img src="f755ac5117ff3eb4172e25f01b745e99-Photoroom.png" class="effect1" alt="" aria-hidden="true">
+        <img src="df19e7339232cf54a015f312051ae55c-Photoroom.png" class="effect2" alt="" aria-hidden="true">
+        <img src="Hakujoudai_(Green)-Photoroom.png" class="effect3" alt="" aria-hidden="true">
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
